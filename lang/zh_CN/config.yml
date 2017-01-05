@@ -1,0 +1,28 @@
+title: 首页样式配置
+
+type:
+  title: 样式类型
+  select-title: 选择样式类型
+  option-default: 默认
+  option-fixed: 背景固定（IE 下可能有异常）
+  option-old: v2 样式
+
+navbar:
+  title: 导航栏菜单
+  textarea-title: 编辑菜单项
+  message: '<a href="/index-style/example" style="text-decoration: none;">点这里</a>看如何填写。下拉菜单项内不要再嵌套菜单'
+
+feature:
+  title: 首页底部特性文本
+  1-title: 特性一标题
+  1-text: 特性一文本
+  1-fa: 特性一 Font Awesome
+  2-title: 特性二标题
+  2-text: 特性二文本
+  2-fa: 特性二 Font Awesome
+  3-title: 特性三标题
+  3-text: 特性三文本
+  3-fa: 特性三 Font Awesome
+  intro-title: 简介文本
+  btn-start: “开始使用” 按钮文本
+  message: 若留空，则使用 Blessing Skin Server 默认值

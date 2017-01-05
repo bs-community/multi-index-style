@@ -1,0 +1,28 @@
+title: Multi Index Style Config
+
+type:
+  title: Style Type
+  select-title: Choose a style type
+  option-default: Default
+  option-fixed: Fixed Background (It may not run well under IE)
+  option-old: Style of v2
+
+navbar:
+  title: Navigation Bar Menu
+  textarea-title: Edit menu items
+  message: '<a href="/index-style/example" style="text-decoration: none;">Click HERE</a> to how you should write. Do NOT use menu again in dropdown menu items.'
+
+feature:
+  title: Footer Feature Text
+  1-title: Title of Feature One
+  1-text: Text of Feature One
+  1-fa: Font Awesome of Feature One
+  2-title: Title of Feature Two
+  2-text: Text of Feature Two
+  2-fa: Font Awesome of Feature Two
+  3-title: Title of Feature Three
+  3-text: Text of Feature Tree
+  3-fa: Font Awesome of Feature Three
+  intro-title: Text of introduction
+  btn-start: Text of "Join Us" Button
+  message: If let it empty, it will use default values of Blessing Skin Server.

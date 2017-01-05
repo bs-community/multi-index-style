@@ -1,0 +1,9 @@
+{
+  "name": "multi-index-style",
+  "version": "0.1",
+  "title": "多种首页样式",
+  "description": "整合了官方的首页样式，并增加其它样式。",
+  "author": "gplane",
+  "namespace": "GPlane\\MultiIndexStyle",
+  "config": "config.tpl"
+}
