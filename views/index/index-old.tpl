@@ -100,8 +100,8 @@
 
         <!-- Main Footer -->
         <footer class="main-footer">
-            <div class="container text-center">
-                {!! bs_copyright() !!}
+            <div class="container text-center" id="copyright-text">
+                  {!! bs_copyright() !!}
             </div>
         </footer>
 
