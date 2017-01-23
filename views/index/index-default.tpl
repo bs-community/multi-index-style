@@ -144,8 +144,8 @@
                 {!! bs_copyright() !!}
             </div>
             <!-- Default to the left -->
-            <div id="copyright-text" class="pull-right hidden-xs">
-                  {!! bs_copyright() !!}
+            <div id="copyright-text" class="hidden-xs">
+                  {!! bs_custom_copyright() !!}
             </div>
         </div>
     </div>
