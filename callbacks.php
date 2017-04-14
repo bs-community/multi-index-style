@@ -20,5 +20,6 @@ return [
         if (file_exists($path = base_path('plugins/multi-index-style/views/example.tpl'))) {
             unlink($path);
         }
+        Artisan::call('view:clear');
     }
 ];
