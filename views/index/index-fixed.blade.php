@@ -17,7 +17,7 @@
 
     <div class="wrapper">
         <div class="background-warpper">
-            <img src="{{ option('home_pic_url') }}" alt="">
+            <img class="index-background" src="" alt="">
         </div>
         <!-- Navigation -->
         <header class="main-header transparent">
@@ -166,6 +166,9 @@
             } else {
                 $('.main-header').addClass('transparent');
             }
+        });
+        $.get('/index-style/bg', function (data) {
+            $('.index-background').attr('src', data);
         });
     </script>
 </body>

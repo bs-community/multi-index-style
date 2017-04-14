@@ -35,6 +35,7 @@ return function (Dispatcher $events, Request $request) {
             'prefix'     => 'index-style'
             ],
             function ($router) {
+                $router->any('bg', 'StyleController@bg');
                 $router->any('feature', 'StyleController@getText');
                 $router->any('navbar', 'StyleController@navBarItems');
                 $router->any('example', 'StyleController@exampleShow');

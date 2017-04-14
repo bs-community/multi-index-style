@@ -6,6 +6,8 @@ general:
   option-default: 默认
   option-fixed: 背景固定（IE 下可能有异常）
   option-old: v2 样式
+  bing-bg: Bing 美图
+  bing-bg-label: 使用 Bing 美图
 
 navbar:
   title: 导航栏菜单

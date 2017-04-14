@@ -13,7 +13,7 @@
 
 <body class="hold-transition {{ option('color_scheme') }} layout-top-nav">
 
-    <div class="wrapper" style="background-image: url('{{ option('home_pic_url') }}');">
+    <div class="wrapper">
         <!-- Navigation -->
         <header class="main-header transparent">
             <nav class="navbar navbar-fixed-top">
@@ -161,6 +161,9 @@
             } else {
                 $('.main-header').addClass('transparent');
             }
+        });
+        $.get('/index-style/bg', function (data) {
+            $('.wrapper').css('background-image', 'url(' + data + ')');
         });
     </script>
 </body>

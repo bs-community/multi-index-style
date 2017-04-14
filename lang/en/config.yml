@@ -6,6 +6,8 @@ general:
   option-default: Default
   option-fixed: Fixed Background (It may not run well under IE)
   option-old: Style of v2
+  bing-bg: Bing Background
+  bing-bg-label: Use Bing background pictures
 
 navbar:
   title: Navigation Bar Menu
