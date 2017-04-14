@@ -5,5 +5,5 @@
   "description": "整合了官方的首页样式，并增加其它样式。",
   "author": "gplane",
   "namespace": "GPlane\\MultiIndexStyle",
-  "config": "config.tpl"
+  "config": "config.blade.php"
 }
