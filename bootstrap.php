@@ -1,9 +1,10 @@
 <?php
 
 use App\Services\Hook;
+use Illuminate\Http\Request;
 use Illuminate\Contracts\Events\Dispatcher;
 
-return function (Dispatcher $events) {
+return function (Dispatcher $events, Request $request) {
 
     if (!empty(option('index_style_type'))) {
         $style = option('index_style_type');
@@ -22,8 +23,10 @@ return function (Dispatcher $events) {
         }
     }
 
-    Hook::addScriptFileToPage(plugin_assets('multi-index-style', 'assets/js/feature.js'));
-    Hook::addScriptFileToPage(plugin_assets('multi-index-style', 'assets/js/navbar.js'));
+    if ($request->is('/')) {
+        Hook::addScriptFileToPage(plugin_assets('multi-index-style', 'assets/js/feature.js'));
+        Hook::addScriptFileToPage(plugin_assets('multi-index-style', 'assets/js/navbar.js'));
+    }
 
     Hook::addRoute(function ($routers) {
         $routers->group([
