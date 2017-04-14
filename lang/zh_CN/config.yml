@@ -1,8 +1,8 @@
 title: 首页样式配置
 
-type:
-  title: 样式类型
-  select-title: 选择样式类型
+general:
+  title: 一般设置
+  select-title: 选择首页样式类型
   option-default: 默认
   option-fixed: 背景固定（IE 下可能有异常）
   option-old: v2 样式

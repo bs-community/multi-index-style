@@ -17,11 +17,11 @@
   <!-- Main content -->
   <section class="content">
     <?php
-      $formStyleChoose = Option::form('style_choose', trans('GPlane\MultiIndexStyle::config.type.title'), function($form) {
-        $form->select('index_style_type', trans('GPlane\MultiIndexStyle::config.type.select-title'))
-            ->option('default', trans('GPlane\MultiIndexStyle::config.type.option-default'))
-            ->option('fixed', trans('GPlane\MultiIndexStyle::config.type.option-fixed'))
-            ->option('old', trans('GPlane\MultiIndexStyle::config.type.option-old'));
+      $formStyleChoose = Option::form('style_choose', trans('GPlane\MultiIndexStyle::config.general.title'), function($form) {
+        $form->select('index_style_type', trans('GPlane\MultiIndexStyle::config.general.select-title'))
+            ->option('default', trans('GPlane\MultiIndexStyle::config.general.option-default'))
+            ->option('fixed', trans('GPlane\MultiIndexStyle::config.general.option-fixed'))
+            ->option('old', trans('GPlane\MultiIndexStyle::config.general.option-old'));
       })->handle();
 
       $formNavBarItems = Option::form('nav_bar', trans('GPlane\MultiIndexStyle::config.navbar.title'), function ($form)

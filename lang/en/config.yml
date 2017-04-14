@@ -1,8 +1,8 @@
 title: Multi Index Style Config
 
-type:
-  title: Style Type
-  select-title: Choose a style type
+general:
+  title: General Settings
+  select-title: Choose a style type of index page
   option-default: Default
   option-fixed: Fixed Background (It may not run well under IE)
   option-old: Style of v2
