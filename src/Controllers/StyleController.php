@@ -10,7 +10,7 @@ class StyleController extends Controller
     public function bg() {
         if (option('use_bing_pic')) {
             $data = json_decode(file_get_contents('http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1'), true);
-            return 'http://cn.bing.com'.$data['images'][0]['url'];
+            return 'https://cn.bing.com'.$data['images'][0]['url'];
         } else {
             return option('home_pic_url');
         }
