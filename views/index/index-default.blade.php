@@ -8,7 +8,14 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- App Styles -->
-    {!! bs_header('index') !!}
+    <?php
+        if (function_exists('bs_header')) {
+            bs_header('index');
+        }
+    ?>
+    @unless (function_exists('bs_header'))
+        @include('common.dependencies.style', ['module' => 'index'])
+    @endunless
 </head>
 
 <body class="hold-transition {{ option('color_scheme') }} layout-top-nav">
@@ -149,7 +156,14 @@
     </div>
 
     <!-- App Scripts -->
-    {!! bs_footer() !!}
+    <?php
+        if (function_exists('bs_footer')) {
+            bs_footer();
+        }
+    ?>
+    @unless (function_exists('bs_footer'))
+        @include('common.dependencies.script')
+    @endunless
 
     <script>
         var changeWrapperHeight = function() { $('.wrapper').height($(window).height()) };

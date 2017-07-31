@@ -8,8 +8,14 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- App Styles -->
-    {!! bs_header('index') !!}
-    <!-- 首页不滚动样式插件 v1.0 for Blessing Skin Server -->
+    <?php
+        if (function_exists('bs_header')) {
+            bs_header('index');
+        }
+    ?>
+    @unless (function_exists('bs_header'))
+        @include('common.dependencies.style', ['module' => 'index'])
+    @endunless
     <link rel="stylesheet" href="{{ plugin_assets('multi-index-style', 'assets/css/fixed.css') }}">
 </head>
 
@@ -154,7 +160,14 @@
     </div>
 
     <!-- App Scripts -->
-    {!! bs_footer() !!}
+    <?php
+        if (function_exists('bs_footer')) {
+            bs_footer();
+        }
+    ?>
+    @unless (function_exists('bs_footer'))
+        @include('common.dependencies.script')
+    @endunless
 
     <script>
         var changeWrapperHeight = function() { $('.wrapper').height($(window).height()) };
