@@ -16,6 +16,19 @@
     @unless (function_exists('bs_header'))
         @include('common.dependencies.style', ['module' => 'index'])
     @endunless
+    <style>
+        .content-wrapper {
+            min-height: 83%;
+        }
+        .splash {
+            top: 0
+        }
+        @media (min-width: 48em) {
+            .splash {
+                height: 55%
+            }
+        }
+    </style>
 </head>
 
 <body class="hold-transition {{ option('color_scheme') }} layout-top-nav">
