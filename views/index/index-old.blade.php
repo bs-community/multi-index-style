@@ -55,7 +55,12 @@
                     <!-- Navbar Right Menu -->
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
-                            @include('vendor.language')
+                            @if (view()->exists('common.language'))
+                                @include('common.language')
+                            @else
+                                @include('vendor.language')
+                            @endif
+
                             @if (!is_null($user))
                             <!-- User Account Menu -->
                                 @if (view()->exists('common.user-menu'))
