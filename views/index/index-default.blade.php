@@ -180,9 +180,6 @@
                 $('.main-header').addClass('transparent');
             }
         });
-        $.get('/index-style/bg', function (data) {
-            $('.wrapper').css('background-image', 'url(' + data + ')');
-        });
     </script>
 </body>
 </html>

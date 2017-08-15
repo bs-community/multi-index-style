@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 
 class StyleController extends Controller
 {
-    public function bg() {
+    private function bg() {
         if (option('use_bing_pic')) {
             $data = json_decode(file_get_contents('http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1'), true);
             return 'https://cn.bing.com'.$data['images'][0]['url'];
@@ -16,7 +16,7 @@ class StyleController extends Controller
         }
     }
 
-    public function getText()
+    private function getText()
     {
         $result = array(
             'feature_1_title'   => empty(option('feature_1_title')) ? trans('index.features.multi-player.name') : option('feature_1_title'),
@@ -41,10 +41,10 @@ class StyleController extends Controller
 
             'start_button_text' => empty(option('start_button_text')) ? trans('index.start') : option('start_button_text'));
 
-        return response()->json($result);
+        return $result;
     }
 
-    public function navBarItems()
+    private function navBarItems()
     {
         $items = array();
         $nav_bar_text = option('nav_bar_items');
@@ -61,7 +61,6 @@ class StyleController extends Controller
         foreach ($items as $item) {
             switch (substr($item, 0, 2)) {
                 case '//':
-                    # code...
                     break;
                 case '|:':
                     $dropdown = array('type' => 'dropdown', 'title' => substr($item, 2), 'count' => 0, 'menu' => array());
@@ -104,7 +103,15 @@ class StyleController extends Controller
                     break;
             }
         }
-        return response()->json($nav_bar_items);
+        return $nav_bar_items;
+    }
+
+    public function info() {
+        return response()->json([
+            'bg' => $this->bg(),
+            'feature' => $this->getText(),
+            'navbar' => $this->navBarItems()
+        ]);
     }
 
     public function exampleShow()

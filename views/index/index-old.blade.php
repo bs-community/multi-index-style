@@ -143,12 +143,5 @@
 
     <!-- Quick fix for logging out at homepage when installed to a subdir -->
     <script>base_url = ".";</script>
-
-    <!-- Background image -->
-    <script>
-        $.get('/index-style/bg', function (data) {
-            $('.wrapper').css('background-image', 'url(' + data + ')');
-        });
-    </script>
 </body>
 </html>
