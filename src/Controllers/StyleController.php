@@ -2,7 +2,6 @@
 
 namespace GPlane\MultiIndexStyle\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class StyleController extends Controller

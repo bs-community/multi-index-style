@@ -2,9 +2,8 @@
 
 use App\Services\Hook;
 use Illuminate\Http\Request;
-use Illuminate\Contracts\Events\Dispatcher;
 
-return function (Dispatcher $events, Request $request) {
+return function (Request $request) {
 
     if (!empty(option('index_style_type'))) {
         $style = option('index_style_type');
