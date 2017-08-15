@@ -16,19 +16,19 @@ function getAppendContent (item) {
 }
 
 function addNavBarItems (list) {
-  for (i = 0; i < list.length; i++) {
-    if (list[i].type == 'dropdown') {
+  for (const item of list) {
+    if (item.type == 'dropdown') {
       content =
         '<li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>' +
-        list[i].title +
+        item.title +
         '</span><span class="caret"></span></a><ul class="dropdown-menu" role="menu">'
-      for (var j = 0; j < list[i].count; j++) {
-        content += getAppendContent(list[i].menu[j])
+      for (let j = 0; j < item.count; j++) {
+        content += getAppendContent(item.menu[j])
       }
       content += '</ul></li>'
       $('#navbar-unordered-list').append(content)
     } else {
-      $('#navbar-unordered-list').append(getAppendContent(list[i]))
+      $('#navbar-unordered-list').append(getAppendContent(item))
     }
   }
 }
