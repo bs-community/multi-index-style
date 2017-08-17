@@ -24,6 +24,8 @@
             ->option('old', trans('GPlane\MultiIndexStyle::config.general.option-old'));
         $form->checkbox('use_bing_pic', trans('GPlane\MultiIndexStyle::config.general.bing-bg'))
             ->label(trans('GPlane\MultiIndexStyle::config.general.bing-bg-label'));
+        $form->text('random_bg_dir', trans('GPlane\MultiIndexStyle::config.general.random-bg'))
+            ->hint(trans('GPlane\MultiIndexStyle::config.general.random-bg-hint'));
       })->handle();
 
       $formNavBarItems = Option::form('nav_bar', trans('GPlane\MultiIndexStyle::config.navbar.title'), function ($form)

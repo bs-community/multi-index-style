@@ -10,9 +10,23 @@ class StyleController extends Controller
         if (option('use_bing_pic')) {
             $data = json_decode(file_get_contents('http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1'), true);
             return 'https://cn.bing.com'.$data['images'][0]['url'];
-        } else {
-            return option('home_pic_url');
+        } elseif ($dir = option('random_bg_dir')) {
+            $files = scandir($dir);
+            if ($files) {
+                $pics = array_filter($files, function ($file) use ($dir) {
+                    return is_file("$dir/$file") && (
+                        ends_with($file, '.png') ||
+                        ends_with($file, '.jpg') ||
+                        ends_with($file, '.bmp') ||
+                        ends_with($file, '.jpeg')
+                    );
+                });
+
+                return "$dir/".$pics[array_rand($pics)];
+            }
         }
+
+        return option('home_pic_url');
     }
 
     private function getText()
