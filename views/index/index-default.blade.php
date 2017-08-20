@@ -160,6 +160,11 @@
             </div>
             <!-- Default to the left -->
             {!! bs_custom_copyright() !!}
+            @if (option('website_approve'))
+                <a href="http://www.miitbeian.gov.cn/" target="_blank">
+                    （{{ option('website_approve') }}）
+                </a>
+            @endif
         </div>
     </div>
 

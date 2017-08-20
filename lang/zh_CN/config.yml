@@ -10,6 +10,7 @@ general:
   bing-bg-label: 使用 Bing 美图
   random-bg: 背景随机换
   random-bg-hint: 指定服务器上的一个目录（不含子目录），访问首页时将随机从中挑选一张图片作为背景（路径中只能包含英文字符）
+  website-approve: 备案号（如果有）
 
 navbar:
   title: 导航栏菜单

@@ -26,6 +26,7 @@
             ->label(trans('GPlane\MultiIndexStyle::config.general.bing-bg-label'));
         $form->text('random_bg_dir', trans('GPlane\MultiIndexStyle::config.general.random-bg'))
             ->hint(trans('GPlane\MultiIndexStyle::config.general.random-bg-hint'));
+        $form->text('website_approve', trans('GPlane\MultiIndexStyle::config.general.website-approve'));
       })->handle();
 
       $formNavBarItems = Option::form('nav_bar', trans('GPlane\MultiIndexStyle::config.navbar.title'), function ($form)

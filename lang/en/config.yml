@@ -10,6 +10,7 @@ general:
   bing-bg-label: Use Bing background pictures
   random-bg: Random background picture
   random-bg-hint: Specify a directory on this server(excluding sub directory), it will pick a picture randomly from this directory as background while visiting index page. (Only English characters are supported)
+  website-approve: Website Approve (If exists)
 
 navbar:
   title: Navigation Bar Menu
