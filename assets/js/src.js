@@ -18,7 +18,7 @@ function getAppendContent (item) {
 function addNavBarItems (list) {
   for (const item of list) {
     if (item.type == 'dropdown') {
-      content =
+      let content =
         '<li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>' +
         item.title +
         '</span><span class="caret"></span></a><ul class="dropdown-menu" role="menu">'
