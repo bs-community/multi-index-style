@@ -55,7 +55,7 @@ function changeBackground (url) {
   if ($('.index-background').length > 0) {
     $('.index-background').attr('src', url)
   } else {
-    $('.wrapper').css('background-image', `url("${url}")`)
+    $('.hp-wrapper').css('background-image', `url("${url}")`)
   }
 }
 

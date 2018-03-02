@@ -33,7 +33,7 @@
 
 <body class="hold-transition {{ option('color_scheme') }} layout-top-nav">
 
-    <div class="wrapper">
+    <div class="hp-wrapper">
 
         <header class="main-header transparent">
             <nav class="navbar navbar-static-top">
@@ -133,7 +133,7 @@
                   {!! bs_copyright() !!}
             </div>
             @if (option('website_approve'))
-            <div class="container text-center" id="website_approve">     
+            <div class="container text-center" id="website_approve">
                 <a class="hidden-xs" href="http://www.miitbeian.gov.cn/" target="_blank">
                     {{ option('website_approve') }}
                 </a>
