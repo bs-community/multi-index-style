@@ -9,7 +9,8 @@ return function (Request $request) {
         $style = option('index_style_type');
         switch ($style) {
             case 'fixed':
-                View::alias('GPlane\MultiIndexStyle::index.index-fixed', 'index');
+                option(['index_style_type' => 'default']);
+                View::alias('GPlane\MultiIndexStyle::index.index-default', 'index');
                 break;
             case 'old':
                 View::alias('GPlane\MultiIndexStyle::index.index-old', 'index');

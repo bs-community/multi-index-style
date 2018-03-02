@@ -20,7 +20,6 @@
       $formStyleChoose = Option::form('style_choose', trans('GPlane\MultiIndexStyle::config.general.title'), function($form) {
         $form->select('index_style_type', trans('GPlane\MultiIndexStyle::config.general.select-title'))
             ->option('default', trans('GPlane\MultiIndexStyle::config.general.option-default'))
-            ->option('fixed', trans('GPlane\MultiIndexStyle::config.general.option-fixed'))
             ->option('old', trans('GPlane\MultiIndexStyle::config.general.option-old'));
         $form->checkbox('use_bing_pic', trans('GPlane\MultiIndexStyle::config.general.bing-bg'))
             ->label(trans('GPlane\MultiIndexStyle::config.general.bing-bg-label'));
@@ -61,7 +60,7 @@
             {!! $formFeatureText->render() !!}
         </div>
     </div>
-    
+
   </section><!-- /.content -->
 </div><!-- /.content-wrapper -->
 
