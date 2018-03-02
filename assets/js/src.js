@@ -52,11 +52,7 @@ function addFeatureText (data) {
 }
 
 function changeBackground (url) {
-  if ($('.index-background').length > 0) {
-    $('.index-background').attr('src', url)
-  } else {
-    $('.hp-wrapper').css('background-image', `url("${url}")`)
-  }
+  $('.hp-wrapper').css('background-image', `url("${url}")`)
 }
 
 $.getJSON('index-style', ({ bg, feature, navbar }) => {
