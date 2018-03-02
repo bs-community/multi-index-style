@@ -20,7 +20,7 @@
 
 <body class="hold-transition {{ option('color_scheme') }} layout-top-nav">
 
-    <div class="wrapper">
+    <div class="hp-wrapper">
         <!-- Navigation -->
         <header class="main-header transparent">
             <nav class="navbar navbar-fixed-top">
@@ -179,16 +179,28 @@
     @endunless
 
     <script>
-        var changeWrapperHeight = function() { $('.wrapper').height($(window).height()) };
-        $(document).ready(changeWrapperHeight);
-        $(window).resize(changeWrapperHeight).scroll(function(event) {
-            // change color of the navigation bar when scrolling
-            if (document.body.scrollTop >= ($(window).height() * 2 / 3)) {
-                $('.main-header').removeClass('transparent');
+        function changeWrapperHeight() {
+            var btn = $('p a.button')
+            var bottom = btn.offset().top + btn.height() + 80
+            if (bottom > $(window).height()) {
+                $('.hp-wrapper').height(bottom + 'px')
             } else {
-                $('.main-header').addClass('transparent');
+                $('.hp-wrapper').height($(window).height() + 'px')
             }
-        });
+        }
+        function changeHeaderTransparency() {
+            if ($(window).scrollTop() >= ($(window).height() * 2 / 3)) {
+                $('.main-header').removeClass('transparent')
+            } else {
+                $('.main-header').addClass('transparent')
+            }
+        }
+        $(window)
+            .scroll(changeHeaderTransparency)
+            .ready(changeWrapperHeight)
+            .resize(function () {
+                isMobileBrowserScrolling() ? null : changeWrapperHeight()
+            })
     </script>
 </body>
 </html>
