@@ -121,18 +121,18 @@
                 <br>
                 <div class="col-lg-4">
                     <i class="fa fa-users" aria-hidden="true"></i>
-                    <h3 id="feature-1-title">{{ trans('index.features.multi-player.name') }}</h3>
-                    <p id="feature-1-text">{{ trans('index.features.multi-player.desc') }}</p>
+                    <h3 id="feature-1-title">{!! trans('index.features.multi-player.name') !!}</h3>
+                    <p id="feature-1-text">{!! trans('index.features.multi-player.desc') !!}</p>
                 </div>
                 <div class="col-lg-4">
                     <i class="fa fa-share-alt" aria-hidden="true"></i>
-                    <h3 id="feature-2-title">{{ trans('index.features.sharing.name') }}</h3>
-                    <p id="feature-2-text">{{ trans('index.features.sharing.desc') }}</p>
+                    <h3 id="feature-2-title">{!! trans('index.features.sharing.name') !!}</h3>
+                    <p id="feature-2-text">{!! trans('index.features.sharing.desc') !!}</p>
                 </div>
                 <div class="col-lg-4">
                     <i class="fa fa-cloud" aria-hidden="true"></i>
-                    <h3 id="feature-3-title">{{ trans('index.features.free.name') }}</h3>
-                    <p id="feature-3-text">{{ trans('index.features.free.desc') }}</p>
+                    <h3 id="feature-3-title">{!! trans('index.features.free.name') !!}</h3>
+                    <p id="feature-3-text">{!! trans('index.features.free.desc') !!}</p>
                 </div>
             </div>
             <br>
