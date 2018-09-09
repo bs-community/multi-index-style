@@ -1,6 +1,6 @@
 {
   "name": "multi-index-style",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "title": "多种首页样式",
   "description": "整合了官方的首页样式，并增加其它样式。",
   "author": "gplane",
@@ -9,6 +9,9 @@
   "scripts": {
     "build": "rollup -c",
     "zip": "node zip.js"
+  },
+  "require": {
+    "blessing-skin-server": "^3.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
